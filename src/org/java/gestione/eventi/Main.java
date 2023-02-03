@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		Concerto newConcerto= new Concerto("BritneyBitch", "05/09/2025", 135, "20:00","345.67");
-		Concerto newConcerto2= new Concerto("Coldplay VivalaVida", "24/07/2023", 45000, "23:30","2340.60");
+		Concerto newConcerto2= new Concerto("Coldplay VivalaVida", "24/07/2023", 45000, "23:30","233.46");
 		Concerto newConcerto1= new Concerto("LadyGaga Fuck Off", "10/04/2023", 345, "22:00","434.70");
 		Concerto newConcerto3= new Concerto("HarryStyles Colors", "22/07/2023", 1000, "21:30","350.60");
 		ProgrammaEventi programma = new ProgrammaEventi("Eventi Imperdibili");
@@ -20,8 +20,8 @@ public class Main {
 		System.out.println("eventi per il giorno 22/07/2023 " + programma.getEventiInData("22/07/2023")+ "\n");
 		programma.clearEventList();
 		System.out.println("lista eventi ripulita" + programma+ "\n") ;
-		
-		System.out.println("Inizio Implementazione evento \n \n");
+		//Inizio Implementazione evento 
+		System.out.println("\n \n");
 		Evento newEvento = null;
 		String titolo, data;
 		int postiEvento=0;

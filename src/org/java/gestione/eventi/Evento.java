@@ -2,7 +2,6 @@ package org.java.gestione.eventi;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 
 
 public class Evento {

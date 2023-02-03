@@ -27,6 +27,10 @@ public class Concerto extends Evento {
 	}
 	public BigDecimal setPrezzo(String prezzoStr) throws Exception {
 		BigDecimal prezzo= new BigDecimal(prezzoStr);
+		BigDecimal prezzoBase= new BigDecimal("0.0");
+		if(prezzo.compareTo(prezzoBase)<0 || prezzo.compareTo(prezzoBase)==0) {
+			throw new Exception("Il prezzo inserito non e'valido");
+		}
 		return prezzo;
 	}
 	private LocalTime formatTime(String time) {
