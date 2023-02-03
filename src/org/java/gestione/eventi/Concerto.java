@@ -1,7 +1,6 @@
 package org.java.gestione.eventi;
 
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -26,8 +25,8 @@ public class Concerto extends Evento {
 	public BigDecimal getPrezzo() {
 		return prezzo;
 	}
-	public BigDecimal setPrezzo(String prezzos) throws Exception {
-		BigDecimal prezzo= new BigDecimal(prezzos);
+	public BigDecimal setPrezzo(String prezzoStr) throws Exception {
+		BigDecimal prezzo= new BigDecimal(prezzoStr);
 		return prezzo;
 	}
 	private LocalTime formatTime(String time) {
