@@ -46,6 +46,8 @@ public class Main {
         
         String scelta = "";
 		do {
+			System.out.println("Posti prenotati " + newEvento.getNumeroPostiPrenotati());
+			System.out.println("Posti ancora disponibili " + (newEvento.getNumeroPosti()- newEvento.getNumeroPostiPrenotati()));
         	System.out.println("Digita: 1 -> prenota posto, 2-> disdici posto, 3-> uscire");
         	scelta=s.nextLine();
         	switch (scelta) {
@@ -53,11 +55,9 @@ public class Main {
 				String sceltaPosti="";
 				do {
 					try {
-						System.out.println("Posti ancora disponibili " + (newEvento.getNumeroPosti()- newEvento.getNumeroPostiPrenotati()));
 						System.out.println("quanti posti vuoi prenotare?");
 						sceltaPosti=s.nextLine();
 						if(Integer.parseInt(sceltaPosti)>1) {
-							
 								try {
 									for( int i =1; i<= Integer.parseInt(sceltaPosti); i++) {
 									newEvento.prenota();
@@ -73,16 +73,16 @@ public class Main {
 					} catch (Exception e) {
 						sceltaPosti="0";
 						System.out.println("Inserimento non valido");
-						
 					}
 				}while(Integer.parseInt(sceltaPosti)<1);
-				System.out.println("Posti prenotati " + newEvento.getNumeroPostiPrenotati());
+				
 				break;
 			case "2":
 				String sceltaPostidisdetta="";
 				do {
 					try {
 						System.out.println("quanti posti vuoi disdire?");
+						
 						sceltaPostidisdetta=s.nextLine();
 						if(Integer.parseInt(sceltaPostidisdetta)>1) {
 							try {
@@ -91,7 +91,6 @@ public class Main {
 							}}catch (Exception e) {									
 								System.out.println(e.getMessage());
 								}
-							System.out.println("Posti ancora disponibili " + (newEvento.getNumeroPosti()- newEvento.getNumeroPostiPrenotati()));
 							}
 						else if(Integer.parseInt(sceltaPostidisdetta)==1)newEvento.disdici();
 						else if(Integer.parseInt(sceltaPostidisdetta)<1) {
